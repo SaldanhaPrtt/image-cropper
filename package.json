@@ -1,5 +1,5 @@
 {
-  "name": "@origin/image-cropper",
+  "name": "@origin-space/image-cropper",
   "version": "0.1.0",
   "description": "A headless React component for image cropping",
   "main": "./dist/index.cjs",

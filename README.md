@@ -18,11 +18,11 @@ A flexible, headless React component for interactive image cropping.
 ## Installation
 
 ```bash
-npm install @origin/image-cropper react react-dom
+npm install @origin/image-cropper
 # or
-yarn add @origin/image-cropper react react-dom
+yarn add @origin/image-cropper
 # or
-pnpm add @origin/image-cropper react react-dom
+pnpm add @origin/image-cropper
 ```
 
 ## Components
