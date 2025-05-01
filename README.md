@@ -5,7 +5,7 @@
 
 A simple, composable, headless React component for interactive image cropping — inspired by the experience on <a href="https://x.com" target="_blank">X</a>.
 
-![React Image Cropper](https://github.com/user-attachments/assets/b355bd59-c570-428a-8104-fa5307199099)
+![React Image Cropper](https://raw.githubusercontent.com/origin-space/image-cropper/HEAD/media/cropper.png)
 
 ## Features
 
