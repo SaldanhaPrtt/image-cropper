@@ -27,6 +27,90 @@ yarn add @origin/image-cropper
 pnpm add @origin/image-cropper
 ```
 
+## Usage
+
+Here's a basic example of how to use the `Cropper` primitive components:
+
+```tsx
+import { Cropper } from "@origin-space/image-cropper"
+import React from "react"
+
+function MyImageCropper() {
+  const [cropData, setCropData] = React.useState<Area | null>(null)
+
+  return (
+    <div>
+      <Cropper.Root
+        image="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+        aspectRatio={1}
+        onCropChange={setCropData}
+        className="relative flex h-80 w-full cursor-move touch-none items-center justify-center overflow-hidden rounded-md border focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
+        {/* Required for accessibility */}
+        <Cropper.Description className="sr-only" />
+        <Cropper.Image className="pointer-events-none h-full w-full select-none object-cover" />
+        <Cropper.CropArea className="pointer-events-none absolute border-2 border-dashed border-background shadow-[0_0_0_9999px_rgba(0,0,0,0.6)]" />
+      </Cropper.Root>
+
+      {cropData && (
+        <pre className="mt-4 overflow-auto rounded bg-muted p-2 text-sm">
+          {JSON.stringify(cropData, null, 2)}
+        </pre>
+      )}
+    </div>
+  )
+}
+```
+
+For more examples and integration with UI frameworks, check out the implementation on [Origin UI](http://originui.com/image-cropper).
+
+## Origin UI Abstraction
+
+Origin UI provides a [pre-styled component](https://github.com/origin-space/originui/blob/main/registry/default/ui/cropper.tsx) built on top of `@origin-space/image-cropper`. If you're using Origin UI or want a quicker setup, you can use this abstraction.
+
+### Usage with Abstraction
+
+Using the Origin UI abstraction simplifies the markup:
+
+```tsx
+"use client"
+
+import React from "react"
+import {
+  Cropper,
+  CropperCropArea,
+  CropperDescription,
+  CropperImage,
+} from "@/registry/default/ui/cropper"
+
+type Area = { x: number; y: number; width: number; height: number }
+
+export default function Component() {
+  const [cropData, setCropData] = React.useState<Area | null>(null)
+
+  return (
+    <div>
+      <Cropper
+        className="h-80"
+        image="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+        aspectRatio={1}
+        onCropChange={setCropData}
+      >
+        <CropperDescription />
+        <CropperImage />
+        <CropperCropArea />
+      </Cropper>
+
+      {cropData && (
+        <pre className="mt-4 overflow-auto rounded bg-muted p-2 text-sm">
+          {JSON.stringify(cropData, null, 2)}
+        </pre>
+      )}
+    </div>
+  )
+}
+```
+
 ## Components
 
 *   **`Cropper.Root`**: The main container and controller. It handles logic, state, and interactions.
