@@ -89,7 +89,7 @@ export default function Component() {
   const [cropData, setCropData] = React.useState<Area | null>(null)
 
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <Cropper
         className="h-80"
         image="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
@@ -102,7 +102,7 @@ export default function Component() {
       </Cropper>
 
       {cropData && (
-        <pre className="mt-4 overflow-auto rounded bg-muted p-2 text-sm">
+        <pre className="overflow-auto rounded bg-muted p-2 text-sm">
           {JSON.stringify(cropData, null, 2)}
         </pre>
       )}
