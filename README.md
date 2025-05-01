@@ -1,9 +1,11 @@
-# @origin/image-cropper
+# React Image Cropper
 
 [![npm version](https://badge.fury.io/js/%40origin%2Fimage-cropper.svg)](https://badge.fury.io/js/%40origin%2Fimage-cropper)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A flexible, headless React component for interactive image cropping.
+A simple, composable, headless React component for interactive image cropping — inspired by the experience on <a href="https://x.com" target="_blank">X</a>.
+
+![React Image Cropper](https://github.com/user-attachments/assets/b355bd59-c570-428a-8104-fa5307199099)
 
 ## Features
 
