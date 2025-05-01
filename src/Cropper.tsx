@@ -584,7 +584,7 @@ const CropperImage: React.FC<Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'sr
   const imageProps = getImageProps();
 
   return (
-    <div data-slot="crop-image-wrapper" style={getImageWrapperStyle()}>
+    <div style={getImageWrapperStyle()}>
       <img
         {...imageProps}
         className={className}
@@ -604,7 +604,6 @@ const CropperCropArea: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ class
 
   return (
     <div
-      data-slot="crop-area"
       {...areaProps}
       style={{ ...areaProps.style, ...style, ...areaStyle }}
       className={className}
