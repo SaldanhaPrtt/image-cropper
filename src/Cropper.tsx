@@ -312,7 +312,6 @@ const CropperRoot: React.FC<CropperRootProps> = ({
     isPinchingRef.current = false;
     dragStartPointRef.current = { x: e.clientX, y: e.clientY };
     dragStartOffsetRef.current = { x: latestRestrictedOffsetRef.current.x, y: latestRestrictedOffsetRef.current.y };
-    containerRef.current?.focus();
 
     const handleMouseMove = (ev: MouseEvent) => {
       const deltaX = ev.clientX - dragStartPointRef.current.x;
@@ -376,7 +375,6 @@ const CropperRoot: React.FC<CropperRootProps> = ({
     if (!containerRef.current || imageWrapperWidth <= 0 || imageWrapperHeight <= 0) return;
     e.preventDefault();
     const touches = e.touches;
-    containerRef.current?.focus();
 
     if (touches.length === 1) {
       setIsDragging(true); isPinchingRef.current = false;
