@@ -123,13 +123,13 @@ export default function Component() {
 | Prop             | Type                           | Default     | Description                                                                                                  |
 |------------------|--------------------------------|-------------|--------------------------------------------------------------------------------------------------------------|
 | `image`          | `string`                       | **Required**| URL of the image to crop.                                                                                    |
-| `children`       | `React.ReactNode`              | **Required**| Should include `Cropper.Image`, `Cropper.CropArea`, and `Cropper.Description`.                             |
-| `aspectRatio`    | `number`                       | `1`         | The desired width/height aspect ratio of the crop area.                                                      |
+| `children`       | `React.ReactNode`              | **Required**| Should include `Cropper.Image`, `Cropper.CropArea`, and `Cropper.Description`.                               |
+| `aspectRatio`    | `number`                       | `1`         | The desired width/height aspect ratio (e.g., `1`, `1.5`, `4 / 3`, `16 / 9`).                                 |
 | `cropPadding`    | `number`                       | `25`        | Minimum padding (in pixels) between the crop area edges and the container edges.                             |
 | `minZoom`        | `number`                       | `1`         | Minimum zoom level (1 = 100% original size relative to crop area).                                           |
 | `maxZoom`        | `number`                       | `3`         | Maximum zoom level.                                                                                          |
 | `zoomSensitivity`| `number`                       | `0.005`     | Multiplier for mouse wheel delta to control zoom speed.                                                      |
-| `keyboardStep`   | `number`                       | `10`        | Number of pixels to pan the image when using arrow keys.                                                    |
+| `keyboardStep`   | `number`                       | `10`        | Number of pixels to pan the image when using arrow keys.                                                     |
 | `zoom`           | `number`                       | `undefined` | Controlled zoom level. If provided, component zoom state is controlled externally.                           |
 | `onCropChange`   | `(pixels: Area \| null) => void` | `undefined` | Callback function triggered whenever the crop area changes. Receives pixel data or `null` if invalid.      |
 | `onZoomChange`   | `(zoom: number) => void`       | `undefined` | Callback function triggered when the zoom level changes interactively. Essential for controlled `zoom` prop. |
