@@ -1,6 +1,6 @@
 {
   "name": "@origin-space/image-cropper",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "A headless React component for image cropping",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
