@@ -9,6 +9,8 @@ pnpm-debug.log* # Added pnpm log
 
 # Lockfile
 # pnpm-lock.yaml # Usually you commit the lockfile, but ignore if needed
+package-lock.json
+yarn.lock
 
 # Editor directories and files
 .idea
